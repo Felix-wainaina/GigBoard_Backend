@@ -16,14 +16,27 @@ The goal of **GigBoard API** is to formalize campus "hustle culture" by providin
 - **Reviews & Ratings**: Users can provide feedback after a job is completed.  
 
 ## Tech Stack (Suggested)
-- **Backend**: Python with Django REST Framework / Node.js with Express  
-- **Database**: PostgreSQL / MongoDB  
+- **Backend**: Python with Django REST Framework 
+- **Database**: PostgreSQL 
 - **Authentication**: JWT-based secure authentication  
-- **Deployment**: Heroku / Render / Vercel  
+- **Deployment**: Render
 
 ## Target Users
 - University students offering services  
 - University students seeking services  
+
+## Setup Instructions
+1. Clone the repository.
+2. Create a virtual environment: `python -m venv venv`
+3. Activate it: `source venv/Scripts/activate`
+4. Install dependencies: `pip install -r requirements.txt`
+5. Run migrations: `python manage.py migrate`
+6. Run server: `python manage.py runserver`
+
+## API Endpoints
+- `POST /api/auth/register/` - Create account
+- `GET /api/services/` - List gigs
+- `POST /api/orders/` - Place an order
 
 ---
 
