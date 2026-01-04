@@ -10,6 +10,8 @@ class Service(models.Model):
         ('DESIGN', 'Graphics & Design'),
         ('ACADEMIC', 'Tutoring & Academic'),
         ('ERRANDS', 'Errands & Laundry'),
+        ('KRA', 'KRA Returns Filing Services'),
+        ('OTHER', 'Other Services'),
     ]
 
     seller = models.ForeignKey(User, on_delete=models.CASCADE, related_name='services')

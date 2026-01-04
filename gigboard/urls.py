@@ -22,4 +22,5 @@ urlpatterns = [
     path('api/services/', include('services.urls')),
     path('api/', include('orders.urls')), # <--- CHANGED: Removed 'orders/'
     path('api/auth/', include('users.urls')),
+    path('api-auth/', include('rest_framework.urls')), # <--- ADD THIS LINE
 ]
