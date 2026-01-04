@@ -138,3 +138,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+# Add this line below STATIC_URL:
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# This helps WhiteNoise find your static files
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
