@@ -19,10 +19,8 @@ class Order(models.Model):
 
     def __str__(self):
         return f"Order #{self.id} - {self.service.title}"
-
-# --- 2. Review Model comes AFTER Order ---
+# --- 2. Review Model ---
 class Review(models.Model):
-    # We can reference Order here because it was defined above
     order = models.OneToOneField(Order, on_delete=models.CASCADE, related_name='review')
     rating = models.IntegerField(choices=[(i, i) for i in range(1, 6)]) # 1 to 5 stars
     comment = models.TextField()

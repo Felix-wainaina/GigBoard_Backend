@@ -35,5 +35,4 @@ class ReviewViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
     def perform_create(self, serializer):
-        # Additional logic can go here if needed
         serializer.save()
